@@ -1,10 +1,10 @@
-package dev.brianmviana.hexaarch.netflixhexagonalarchitecture
+package dev.brianmviana.hexaarch
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class NetflixHexagonalArchitectureApplicationTests {
+class ApplicationTests {
 
 	@Test
 	fun contextLoads() {

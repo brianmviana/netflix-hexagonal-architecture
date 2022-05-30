@@ -1,4 +1,4 @@
-package dev.brianmviana.hexaarch.netflixhexagonalarchitecture
+package dev.brianmviana.hexaarch
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
