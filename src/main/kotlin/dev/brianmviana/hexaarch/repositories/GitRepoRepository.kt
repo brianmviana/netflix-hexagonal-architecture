@@ -1,9 +1,9 @@
 package dev.brianmviana.hexaarch.repositories
 
-import dev.brianmviana.hexaarch.entities.GitRepo
+import dev.brianmviana.hexaarch.entities.GitRepoList
 
 interface GitRepoRepository {
 
-    fun getGitRepoByOwner(username: String) : GitRepo
+    fun getGitRepoListByOwner(username: String) : GitRepoList
 
 }
