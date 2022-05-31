@@ -51,10 +51,13 @@ gh repo clone brianmviana/netflix-hexagonal-architecture
 * OpenJDK 11 (if you don't use docker)
 
 ## Usage information
+
 [//]: # (1. After open project in your IDE, run `mvn clean generate-resources` to generate stub OpenAPI structure with `OpenAPI Generator` in target folder.)
+
 1. Default api-port is `8180`
 2. Default debug-port is `5105`
 3. Default actuator-port is `9190`
+
 [//]: # (5. Default context-path `/service--softwares-info`)
 [//]: # (6. Swagger URI `/service--softwares-info/swagger-ui/`)
 [//]: # (7. Actuator URI `/actuator`)
