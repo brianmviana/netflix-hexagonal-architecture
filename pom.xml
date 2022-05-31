@@ -6,11 +6,10 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.0</version>
-		<relativePath/>
 	</parent>
 	<groupId>dev.brianmviana.hexaarch</groupId>
 	<artifactId>netflix-hexagonal-architecture</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>netflix-hexagonal-architecture</name>
 	<description>Netflix Hexagonal Architecture with Kotlin</description>
 	<properties>

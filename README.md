@@ -43,26 +43,26 @@ git clone https://github.com/brianmviana/netflix-hexagonal-architecture.git
 gh repo clone brianmviana/netflix-hexagonal-architecture
 ```
 
-[//]: # ()
-[//]: # (## Requirements to run)
-[//]: # (* If you use Windows OS, is strongly recommended that you use Git Bash to perform all operations.)
-[//]: # (* [Docker Engine]&#40;https://www.docker.com/get-started&#41;)
-[//]: # (* [Docker Compose]&#40;https://docs.docker.com/compose/install/&#41;)
-[//]: # (* OpenJDK 11 &#40;if you don't use docker&#41;)
 
-[//]: # (## Usage information)
+## Requirements to run
+* If you use Windows OS, is strongly recommended that you use Git Bash to perform all operations.
+* [Docker Engine](https://www.docker.com/get-started)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* OpenJDK 11 (if you don't use docker)
+
+## Usage information
 [//]: # (1. After open project in your IDE, run `mvn clean generate-resources` to generate stub OpenAPI structure with `OpenAPI Generator` in target folder.)
-[//]: # (2. Default api-port is `8180`)
-[//]: # (3. Default debug-port is `5105`)
-[//]: # (4. Default actuator-port is `9190`)
+1. Default api-port is `8180`
+2. Default debug-port is `5105`
+3. Default actuator-port is `9190`
 [//]: # (5. Default context-path `/service--softwares-info`)
 [//]: # (6. Swagger URI `/service--softwares-info/swagger-ui/`)
 [//]: # (7. Actuator URI `/actuator`)
 
-[//]: # (## Run)
-[//]: # (You can execute `startup.sh`, before grant execution permissions with `chmod +x startup.sh`. If you can't run `startup.sh`, follow these steps:)
-[//]: # (1. Open your terminal in the project folder)
-[//]: # (2. Run `docker-compose up`)
+## Run
+You can execute `startup.sh`, before grant execution permissions with `chmod +x startup.sh`. If you can't run `startup.sh`, follow these steps:
+1. Open your terminal in the project folder
+2. Run `docker-compose up`
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
