@@ -1,6 +1,6 @@
 package dev.brianmviana.hexaarch.datasources.services
 
-import dev.brianmviana.hexaarch.datasources.services.data.response.GithubReporitoryResponse
+import dev.brianmviana.hexaarch.datasources.services.data.response.github.GithubReporitoryResponse
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

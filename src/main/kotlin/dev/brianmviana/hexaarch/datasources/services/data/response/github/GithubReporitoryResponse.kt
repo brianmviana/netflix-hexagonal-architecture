@@ -1,11 +1,10 @@
-package dev.brianmviana.hexaarch.datasources.services.data.response
+package dev.brianmviana.hexaarch.datasources.services.data.response.github
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class GithubReporitoryResponse(
     val stargazersCount: Int? = 0,
-    @JsonProperty("is_template")
-    val isTemplate: Boolean? = false,
+    @JsonProperty("is_template") val isTemplate: Boolean? = false,
     val pushedAt: String? = "",
     val subscriptionUrl: String? = "",
     val language: String? = null,
@@ -13,7 +12,7 @@ data class GithubReporitoryResponse(
     val issueCommentUrl: String? = "",
     val labelsUrl: String? = "",
     val subscribersUrl: String? = "",
-    val permissions: PermissionsResponse?,
+    val permissions: GithubPermissionsResponse?,
     val releasesUrl: String? = "",
     val svnUrl: String? = "",
     val id: Int = 0,
@@ -23,8 +22,7 @@ data class GithubReporitoryResponse(
     val visibility: String? = "",
     val statusesUrl: String? = "",
     val sshUrl: String? = "",
-    @JsonProperty("full_name")
-    val fullName: String = "",
+    @JsonProperty("full_name") val fullName: String = "",
     val size: Int? = 0,
     val templateRepository: String? = null,
     val languagesUrl: String? = "",
@@ -37,8 +35,7 @@ data class GithubReporitoryResponse(
     val hooksUrl: String? = "",
     val treesUrl: String? = "",
     val tagsUrl: String? = "",
-    @JsonProperty("private")
-    val _private: Boolean? = false,
+    @JsonProperty("private") val _private: Boolean? = false,
     val contributorsUrl: String? = "",
     val hasDownloads: Boolean? = false,
     val notificationsUrl: String? = "",
@@ -56,7 +53,7 @@ data class GithubReporitoryResponse(
     val disabled: Boolean? = false,
     val gitUrl: String? = "",
     val hasPages: Boolean? = false,
-    val owner: OwnerResponse,
+    val owner: GithubOwnerResponse,
     val commitsUrl: String? = "",
     val compareUrl: String? = "",
     val gitCommitsUrl: String? = "",

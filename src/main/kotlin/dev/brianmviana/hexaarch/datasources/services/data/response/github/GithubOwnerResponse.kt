@@ -1,6 +1,6 @@
-package dev.brianmviana.hexaarch.datasources.services.data.response
+package dev.brianmviana.hexaarch.datasources.services.data.response.github
 
-data class OwnerResponse(
+data class GithubOwnerResponse(
     val gistsUrl: String? = "",
     val reposUrl: String? = "",
     val followingUrl: String? = "",
