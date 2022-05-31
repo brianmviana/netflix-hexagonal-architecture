@@ -1,0 +1,10 @@
+webservices:
+    github:
+        host: https://api.github.com
+        services:
+            users: ${webservices.github.host}/users
+            repos: ${webservices.github.host}/repos
+    gitlab:
+        host: https://gitlab.com/api/v4
+        services:
+            users: ${webservices.gitlab.host}/users
