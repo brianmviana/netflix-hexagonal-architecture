@@ -4,6 +4,6 @@ import dev.brianmviana.hexaarch.entities.GitRepo
 
 interface GitRepoRepository {
 
-    fun getGitRepoByOwner(username: String) : GitRepo
+    fun getGitRepoListByOwner(username: String) : MutableList<GitRepo>
 
 }

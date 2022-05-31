@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service
 @Service
 class GetGitRepositoryByOwnerUseCase(val gitRepoRepository: GitRepoRepository) {
 
-    fun execute(username: String): GitRepo {
-        return this.gitRepoRepository.getGitRepoByOwner(username)
+    fun execute(username: String): MutableList<GitRepo> {
+        return this.gitRepoRepository.getGitRepoListByOwner(username)
     }
 
 }
