@@ -1,6 +1,6 @@
 package dev.brianmviana.hexaarch.datasources.services
 
-import dev.brianmviana.hexaarch.datasources.services.data.response.GithubRepositoryResponse
+import dev.brianmviana.hexaarch.datasources.services.data.response.GithubReporitoryResponse
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable
 interface GithubRepositoriesClient {
 
     @GetMapping("{username}/repos")
-    fun getGitReposByOwner(@PathVariable("username") username: String): GithubRepositoryResponse
+    fun getGitReposByOwner(@PathVariable("username") username: String): MutableList<GithubReporitoryResponse>
 
 }

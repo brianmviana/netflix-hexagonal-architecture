@@ -1,14 +1,13 @@
 package dev.brianmviana.hexaarch.datasources
 
 import dev.brianmviana.hexaarch.datasources.services.GithubRepositoriesClient
-import dev.brianmviana.hexaarch.datasources.services.data.response.GithubRepositoryResponse
-import dev.brianmviana.hexaarch.datasources.services.mapper.GitRepoListMapper
-import dev.brianmviana.hexaarch.entities.GitRepoList
+import dev.brianmviana.hexaarch.datasources.services.data.response.GithubReporitoryResponse
+import dev.brianmviana.hexaarch.datasources.services.converter.convertToModel
+import dev.brianmviana.hexaarch.entities.GitRepo
 import dev.brianmviana.hexaarch.exceptions.InternalServerErrorException
 import dev.brianmviana.hexaarch.exceptions.NotFoundException
 import dev.brianmviana.hexaarch.repositories.GitRepoRepository
 import feign.FeignException
-import org.mapstruct.factory.Mappers
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 import org.springframework.http.HttpStatus.NOT_FOUND
@@ -19,11 +18,10 @@ class GithubRepositoriesDataSource(
     val githubRepositoriesClient: GithubRepositoriesClient
 ): GitRepoRepository {
 
-    override fun getGitRepoListByOwner(username: String): GitRepoList {
-        var repos = GithubRepositoryResponse()
+    override fun getGitRepoListByOwner(username: String): MutableList<GitRepo> {
+        var repos = mutableListOf<GithubReporitoryResponse>()
         try {
             repos = this.githubRepositoriesClient.getGitReposByOwner(username)
-            println("repositories: " + repos)
         } catch (e: FeignException) {
             e.printStackTrace()
             if (NOT_FOUND.value() == e.status()) {
@@ -31,9 +29,11 @@ class GithubRepositoriesDataSource(
             }
             throw InternalServerErrorException()
         }
-
-        val converter = Mappers.getMapper(GitRepoListMapper::class.java)
-        return converter.map(repos)
+        var repoList = mutableListOf<GitRepo>()
+        repos.forEach {
+            repoList.add(it.convertToModel())
+        }
+        return repoList
     }
 
 }
