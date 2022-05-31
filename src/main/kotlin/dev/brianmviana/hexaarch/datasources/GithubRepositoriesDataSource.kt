@@ -1,7 +1,7 @@
 package dev.brianmviana.hexaarch.datasources
 
 import dev.brianmviana.hexaarch.datasources.services.GithubRepositoriesClient
-import dev.brianmviana.hexaarch.datasources.services.data.response.GithubReporitoryResponse
+import dev.brianmviana.hexaarch.datasources.services.data.response.github.GithubReporitoryResponse
 import dev.brianmviana.hexaarch.datasources.services.converter.convertToModel
 import dev.brianmviana.hexaarch.entities.GitRepo
 import dev.brianmviana.hexaarch.exceptions.InternalServerErrorException

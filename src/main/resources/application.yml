@@ -8,3 +8,4 @@ webservices:
         host: https://gitlab.com/api/v4
         services:
             users: ${webservices.gitlab.host}/users
+            projects: ${webservices.gitlab.host}/projects
