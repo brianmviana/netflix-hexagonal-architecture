@@ -52,15 +52,13 @@ gh repo clone brianmviana/netflix-hexagonal-architecture
 
 ## Usage information
 
-[//]: # (1. After open project in your IDE, run `mvn clean generate-resources` to generate stub OpenAPI structure with `OpenAPI Generator` in target folder.)
-
-1. Default api-port is `8180`
-2. Default debug-port is `5105`
-3. Default actuator-port is `9190`
-
-[//]: # (5. Default context-path `/service--softwares-info`)
-[//]: # (6. Swagger URI `/service--softwares-info/swagger-ui/`)
-[//]: # (7. Actuator URI `/actuator`)
+1. After open project in your IDE, run `mvn clean generate-resources` to generate stub OpenAPI structure with `OpenAPI Generator` in target folder.
+2. Default api-port is `8180`
+3. Default debug-port is `5105`
+4. Default actuator-port is `9190`
+5. Default context-path `/`
+6. Swagger URI `/swagger-ui/`
+7. Actuator URI `/actuator`
 
 ## Run
 You can execute `startup.sh`, before grant execution permissions with `chmod +x startup.sh`. If you can't run `startup.sh`, follow these steps:
