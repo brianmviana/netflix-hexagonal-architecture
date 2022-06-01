@@ -65,7 +65,7 @@ gh repo clone brianmviana/netflix-hexagonal-architecture
 ## Run
 You can execute `startup.sh`, before grant execution permissions with `chmod +x startup.sh`. If you can't run `startup.sh`, follow these steps:
 1. Open your terminal in the project folder
-2. Run `docker-compose up`
+2. Run `docker-compose up -d`
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
