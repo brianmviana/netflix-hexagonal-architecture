@@ -19,7 +19,7 @@ class GithubRepositoriesDataSource(
 ): GitRepoRepository {
 
     override fun getGitRepoListByOwner(username: String): MutableList<GitRepo> {
-        var repos = mutableListOf<GithubReporitoryResponse>()
+        val repos: MutableList<GithubReporitoryResponse>
         try {
             repos = this.githubRepositoriesClient.getGitReposByOwner(username)
         } catch (e: FeignException) {

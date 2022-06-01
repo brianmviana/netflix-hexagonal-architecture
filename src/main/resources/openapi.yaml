@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: openapi
+  version: '1.0'
+  license:
+    name: MIT
+    url: 'https://github.com/brianmviana/netflix-hexagonal-architecture/blob/master/LICENSE'
+  contact:
+    url: 'https://www.zevolution.com.br/'
+    email: brianmviana@gmail.com
+    name: Brian M. Viana
+  description: Example API of Netflix Hexagonal Architecture
+servers:
+  - url: 'http://localhost:8180'
+    description: Development server
+tags:
+  - name: Repository
+    description: Git Repository
+paths:
+  /repository:
+    get:
+      summary: Get Git Repositories
+      responses:
+        '200':
+          $ref: '#/components/responses/RepositoryResponse'
+      operationId: getGitRepositories
+      description: get a Repositories by username
+      parameters:
+        - $ref: '#/components/parameters/username'
+      tags:
+        - Repository
+    parameters: []
+components:
+  schemas:
+    Repository:
+      title: Repository
+      x-stoplight:
+        id: 6bqm6gwxs53zt
+      type: object
+      properties:
+        name:
+          type: string
+        fullName:
+          type: string
+        description:
+          type: string
+      required:
+        - name
+        - fullName
+      description: Git repository model
+      x-tags:
+        - Repository
+  securitySchemes: {}
+  responses:
+    RepositoryResponse:
+      description: Response List of the Git Repository
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Repository'
+          examples: {}
+  parameters:
+    username:
+      name: username
+      in: query
+      required: true
+      schema:
+        type: string
+      description: username of the Git User
