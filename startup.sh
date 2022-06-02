@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "\e[1m---------------------< Application provisioning startup >---------------------\e[0m"
 echo ""
-docker-compose up -d
+docker-compose up -d --build
 echo ""
 echo "------------------------------------------------------------------------------"
 echo ""
