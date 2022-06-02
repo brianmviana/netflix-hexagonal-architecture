@@ -2,7 +2,7 @@ FROM maven:3.8.1-openjdk-11 AS build
 RUN mkdir /src
 COPY . /src
 WORKDIR /src
-RUN mvn clean install
+RUN mvn clean generate-resources install
 
 #-----------------------------------------------------#
 

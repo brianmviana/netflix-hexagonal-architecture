@@ -46,12 +46,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.openapitools</groupId>
-			<artifactId>jackson-databind-nullable</artifactId>
-			<version>0.2.1</version>
-		</dependency>
-
-		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>3.0.0</version>
@@ -130,33 +124,6 @@
 						<version>${kotlin.version}</version>
 					</dependency>
 				</dependencies>
-			</plugin>
-
-			<plugin>
-				<groupId>org.openapitools</groupId>
-				<artifactId>openapi-generator-maven-plugin</artifactId>
-				<version>5.1.1</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/openapi.yaml</inputSpec>
-							<generatorName>kotlin-spring</generatorName>
-							<apiPackage>dev.brianmviana.hexaarch.transportlayers.openapi.api</apiPackage>
-							<modelPackage>dev.brianmviana.hexaarch.transportlayers.openapi.model</modelPackage>
-							<skipValidateSpec>true</skipValidateSpec>
-							<generateAliasAsModel>false</generateAliasAsModel>
-							<enablePostProcessFile>false</enablePostProcessFile>
-							<output>${project.build.directory}/generated-sources</output>
-							<configOptions>
-								<dateLibrary>java8</dateLibrary>
-								<interfaceOnly>true</interfaceOnly>
-							</configOptions>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 
 		</plugins>
